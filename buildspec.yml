@@ -5,18 +5,18 @@ phases:
     runtime-versions:
       python: 3.8
     commands:      
-      - echo 'Install phase: Setting up Python 3.8'
+      - echo Install phase: Setting up Python 3.8
       - python -m ensurepip
       - pip install -r requirements.txt
 
   pre_build:
     commands:
-      - echo "Pre-build phase: Running Lint for Python 3.8"
+      - echo Pre-build phase: Running Lint for Python 3.8
       - make lint
 
   build:
     commands:
-      - echo "Build phase: Building with Python 3.8"
+      - echo Build phase: Building with Python 3.8
       - make build
 
 artifacts:
@@ -29,6 +29,6 @@ cache:
 
 post_build:
   commands:
-    - echo "Post-build phase: Running Tests for Python 3.8"
+    - echo Post-build phase: Running Tests for Python 3.8
     - make test
 
