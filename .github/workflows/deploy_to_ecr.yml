@@ -33,4 +33,4 @@ jobs:
         docker build -t test_mlops .
         docker tag test_mlops:latest 434404663272.dkr.ecr.ap-northeast-2.amazonaws.com/test_mlops:latest
         docker push 434404663272.dkr.ecr.ap-northeast-2.amazonaws.com/test_mlops:latest
-        
+        docker run -d -p 8080:5000 434404663272.dkr.ecr.ap-northeast-2.amazonaws.com/test_mlops:latest
