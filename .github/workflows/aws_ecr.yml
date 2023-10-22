@@ -25,6 +25,7 @@ jobs:
     - name: Build and Push Docker Image
       env:
         ECR_REGISTRY: ${{ secrets.ECR_REGISTRY }}
+        ECR_REGISTRY: 434404663272.dkr.ecr.ap-northeast-2.amazonaws.com/test_mlops
         REPO_NAME: ${{ secrets.REPO_NAME }}
         AWS_DEFAULT_REGION: ap-northeast-2  # 원하는 AWS 리전 지정
       run: |
